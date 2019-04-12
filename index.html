@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>My first test with PWA</title>
+    <style> body{max-width: 1280px;margin: 0 auto;font-family: arial;}h1{text-align: center;}</style>
+  </head>
+  <body>
+    <h1> This is a basic HTML page with some text</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc at arcu sed augue tristique pharetra sed eu sapien. Fusce in nibh mauris. Ut mauris nulla, gravida sed tincidunt non, congue a augue. Nullam tempor nisi at lorem ultrices pulvinar. Nam lobortis euismod ullamcorper. Mauris maximus luctus arcu, nec rutrum mauris semper quis. Suspendisse fringilla ipsum tellus, sed convallis massa dapibus eget. Nullam feugiat nisi nulla, vitae eleifend mi tristique ut. In at gravida leo. Nullam vel nibh non nulla ultricies sollicitudin in vel tortor. Nulla rutrum arcu nisi, id elementum dolor hendrerit et.</p>
+    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus sollicitudin lectus eu lorem tristique, sed condimentum dui vulputate. Nam fermentum elit in scelerisque aliquet. Mauris vulputate leo at libero iaculis, at fermentum dui luctus. Donec sagittis sodales scelerisque. Mauris eleifend, lectus bibendum cursus ultrices, diam turpis finibus dui, blandit scelerisque augue nunc id massa. Mauris scelerisque neque et fringilla gravida. Cras id eros tellus. In hac habitasse platea dictumst. Aliquam quis consequat ex. Aliquam elementum porta lacus, eget aliquet tellus pretium nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vel arcu ex.</p>
+    <p>Integer aliquet blandit vulputate. In eget ex et tortor efficitur ornare sit amet nec magna. Morbi iaculis aliquet erat, ut cursus arcu porta eget. Phasellus mattis bibendum ipsum vel rhoncus. Ut non erat in erat pulvinar consectetur. Nunc elementum, sem in consequat lacinia, ipsum ex ultrices libero, sed porttitor nisi diam et augue. Phasellus justo tellus, pulvinar nec elementum commodo, facilisis et neque. Donec vestibulum dolor vel libero bibendum, et vestibulum nulla dapibus. Fusce ornare libero eu sem feugiat, quis imperdiet ex fermentum. In vestibulum interdum vestibulum. Donec quis urna vitae leo volutpat sagittis ac at felis. Fusce mauris purus, consequat ut nulla vel, suscipit gravida odio. Nullam sodales ex sed dolor dapibus dignissim. Nulla ligula augue, porta at rutrum quis, malesuada non leo. Vivamus ut pretium quam.</p>
+    <p>In a maximus sapien. Morbi rutrum et massa a posuere. Nam aliquam sodales purus nec rhoncus. Morbi malesuada velit nisl, ut finibus risus bibendum vitae. Sed fermentum nibh at fringilla suscipit. Nulla eget tristique enim, et imperdiet massa. Aliquam id sapien a metus blandit dictum dapibus non mi. Ut bibendum ut lacus vel pretium. Fusce venenatis sollicitudin pulvinar. Sed elementum quis ipsum sed semper. Suspendisse eget orci sit amet sapien sollicitudin dignissim id et felis. Sed non molestie nisl. Cras ullamcorper urna nisi, eget mollis leo dignissim ut. Sed cursus sagittis purus eu dictum.</p>
+    <p>Donec purus nunc, vulputate ut luctus laoreet, hendrerit quis odio. Nullam id leo accumsan dolor eleifend ullamcorper. Praesent nec tortor sed sem pharetra condimentum. Praesent a lectus ut lorem finibus laoreet. Nulla diam diam, ornare in semper vel, semper id erat. Maecenas vel metus est. In hendrerit at enim nec sollicitudin. Vestibulum suscipit dui eget bibendum volutpat. Vivamus rutrum sapien id mi semper, id iaculis orci pharetra. Maecenas iaculis iaculis viverra. Curabitur blandit vel ligula id dapibus. Integer eu risus hendrerit, dapibus turpis eu, scelerisque justo. Cras in nulla eu mi ullamcorper semper. Duis at facilisis arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+  </body>
+  <script type="text/javascript">
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js', {'scope': '/').then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
+    }
+</script>
+</html>
