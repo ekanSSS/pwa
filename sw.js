@@ -5,7 +5,7 @@ const filesList = [
 ];
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    cache.open(cacheName)
+    caches.open(cacheName)
       // Add your file to cache
       .then( (cache) => {
         return cache.addAll(filesList);
@@ -25,14 +25,13 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   // If we don't have internet connection and it's a navigation request
   if (!navigator.onLine && event.request.mode === 'navigate') {
-    event.respondWith( () => {
-      return cache.open(cacheName)
-        .then( (cache) => {
-          // If we find our offline page in cache, respond with it
-          return cache.match(offlinePage)
-            .then( (response) => response);
-        });
-    })
+    event.respondWith( caches.open(cacheName)
+      .then( (cache) => {
+        // If we find our offline page in cache, respond with it
+        return cache.match(offlinePage)
+          .then( (response) => response);
+      })
+    );
   } else {
     // Return null let browser do his normal behavior
     return;
